@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity() {
         findViewById<Button>(R.id.activityMainButton).setOnClickListener {
             startActivity(
                 Intent(this, SecondActivity::class.java),
+                // Comment this line out and the error will not persist
                 ActivityOptions.makeSceneTransitionAnimation(this).toBundle()
             )
         }
